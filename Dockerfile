@@ -1,4 +1,4 @@
-FROM alpine:3.24
+FROM alpine:3.24.3
 
 ENV LANG=zh_CN.UTF-8 \
     TZ=Asia/Shanghai \
@@ -45,6 +45,7 @@ RUN apk upgrade --no-cache \
     ttf-dejavu \
     tzdata \
     wget \
+    vim \
     bash \
     && fc-cache -f -v \
     && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime \
